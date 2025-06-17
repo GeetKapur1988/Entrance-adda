@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
-import Dashboard from './components/Dashboard';
 import Login from './components/Login';
+import Dashboard from './components/Dashboard';
 
 export default function App() {
   return (
@@ -11,7 +11,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="*" element={<div style={{ color: 'white', padding: 20 }}>404 - Page not found</div>} />
+        <Route path="*" element={<div style={{ padding: 40, color: 'white' }}>404 - Not Found</div>} />
       </Routes>
     </Router>
   );
