@@ -1,5 +1,7 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage, { PaymentSuccess, PaymentFailure, LoginPage } from './HomePage';
+
+import HomePage, { LoginPage, Dashboard } from './HomePage';
 
 function App() {
   return (
@@ -7,8 +9,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/payment-success" element={<PaymentSuccess />} />
-        <Route path="/payment-failure" element={<PaymentFailure />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="*" element={<div className="text-white p-4">404 - Page not found</div>} />
       </Routes>
     </Router>
   );
